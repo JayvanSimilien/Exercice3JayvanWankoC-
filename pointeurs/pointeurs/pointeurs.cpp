@@ -1,11 +1,12 @@
 // pointeurs.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
-#include <iostream>
+#include "fonction.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+	GestionDesAdresses();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
