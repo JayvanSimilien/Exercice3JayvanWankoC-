@@ -43,3 +43,20 @@ void GestionDesAdresses()
 	pt3 = tableau;
 	cout << "Valeur de pt3 : " << pt3[4] << endl;
 }
+
+void ParcourirTableau()
+{
+	int tableau[] = { 10,20,30,40,50 };
+	for (int i = 0; i < sizeof(tableau) / sizeof(tableau[0]); i++)
+	{
+		cout << tableau[i] << endl;
+	}
+
+	int *pt = tableau;
+	for (int i = 0; i < sizeof(tableau) / sizeof(tableau[0]); i++)
+	{
+		cout << *(pt +i) << endl;
+	}
+
+	//Les deux boucles affichent la même chose, mais la deuxième utilise un pointeur pour parcourir le tableau, tandis que la première utilise un index.
+}
