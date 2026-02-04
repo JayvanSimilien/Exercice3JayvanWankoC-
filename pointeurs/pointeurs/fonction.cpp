@@ -60,3 +60,38 @@ void ParcourirTableau()
 
 	//Les deux boucles affichent la même chose, mais la deuxième utilise un pointeur pour parcourir le tableau, tandis que la première utilise un index.
 }
+
+void TableauDynamique() 
+{
+	cout << "Entrez la taille du tableau dynamique : ";
+	int taille;
+	cin >> taille;
+	int** ptTableau = new int*[taille];
+
+	for (int i = 0; i < taille; i++)
+	{
+		ptTableau[i] = nullptr;
+	}
+
+	for (int i = 0;  i < taille / 2;  i++)
+	{
+		int* valeur = new int;
+		cout << "Entrez une valeur :" << endl;
+		cin >> *valeur;
+		ptTableau[i] = valeur;
+	}
+	for (int i = 0; i < taille; i++)
+	{
+		if (ptTableau[i] != nullptr)
+		{
+			cout << *ptTableau[i] << endl;
+		}
+	}
+	for (int i = 0; i < taille; i++)
+	{
+		if (ptTableau[i] != nullptr)
+		{
+			delete ptTableau[i];
+		}
+	}
+}
